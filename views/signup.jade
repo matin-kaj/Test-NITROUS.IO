@@ -1,0 +1,14 @@
+
+h1 Register for Minnit
+form(method='POST', action='/signup')
+  table(border='0')
+    tbody
+      tr
+        td Username:
+        td
+          input(type='text', name='username')
+      tr
+        td Password:
+        td
+          input(type='password', name='password')
+  input(type='submit', value='Sign Up')

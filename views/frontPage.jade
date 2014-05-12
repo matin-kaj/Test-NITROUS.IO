@@ -1,0 +1,31 @@
+
+h1 Minnit - a teeny-tiny mini-Reddit
+//- <% _.each(bookmarks, function(bookmark) { %>
+//- <% }); %>
+
+#bookmarks
+each bookmark in bookmarks 
+    table(border='0')
+      tbody
+        tr
+          td(align='center')
+            form(method='POST', action='/vote')
+              input(type='hidden', name='title', value='#{bookmark.title}')
+              input(type='image', src='/images/arrow_up_16x16.png', name='direction', value='up')
+          td(rowspan='3')
+            a(href='#{ bookmark.url}') #{ bookmark.title}--->>>>
+
+            a(href='/comment/#{bookmark.title}') COMMENT
+        tr
+          td(align='center')
+            | #{bookmark.score}
+          td
+        tr
+          td(align='center')
+            form(method='POST', action='/vote')
+              input(type='hidden', name='title', value='#{bookmark.title}')
+              input(type='image', src='/images/arrow_down_16x16.png', name='direction', value='down')
+          td
+
+a(href='/signup') Join
+a(href='/submit') Submit a new link

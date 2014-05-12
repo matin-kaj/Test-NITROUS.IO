@@ -1,0 +1,13 @@
+h1 Submit a new link
+form(method='POST', action='/submit')
+  table(border='0')
+    tbody
+      tr
+        td Title:
+        td
+          input(type='text', name='title')
+      tr
+        td Link:
+        td
+          input(type='text', name='link')
+  input(type='submit', value='Submit Link')

@@ -1,0 +1,42 @@
+h1 Hello Exp
+h2=title
+
+- var name= "<em>matin</em>";
+-var fn = function (){return "Hello,,,,,,,"};
+
+	ul#nav
+		li.class1 one
+		li !{name}
+		li three
+		li=fn()
+		a(href="/other") Go to other 
+
+		-var followerCount =2;
+
+		- if (followerCount ===0){
+			p You have no followers.
+		-} else if (followerCount ===1){
+			p You have one follower
+		-} else {
+			p You have #{followerCount} followers 
+		-}
+		- followerCount=1;
+		p
+			if followerCount ===0
+				| You have no followers.
+			else if followerCount ===1
+				| You have one follower
+			else 
+				| You have #{followerCount} followers
+
+
+
+- var users = [ { name: "matin",email: "matin@yaoo.com"},{ name: "Ali",email: "ali@yaoo.com"},{name: "mona",email:"moana@yaoo.com"}];
+
+include mixins
+
+ul
+	each user, i in users
+		mixin userLi(user)
+
+

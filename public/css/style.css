@@ -1,0 +1,13 @@
+html, body, #wrapper, #page-wrapper {
+  height: 100%;
+}
+nav.navbar.navbar-default.navbar-fixed-top {
+  margin-bottom: 0;
+}
+.sidebar-collapse {
+  position: fixed;
+  top: 51px;
+  bottom: 0;
+  width: inherit;
+  border-right: 1px solid #e7e7e7;
+}
